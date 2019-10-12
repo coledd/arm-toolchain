@@ -4,7 +4,7 @@ PREFIX=$(BASEDIR)/$(TARGET)
 MAKEOPTS="-j16"
 PATH:=$(PREFIX)/bin:$(PATH)
 
-BINUTILS_VER=2.32
+BINUTILS_VER=2.33.1
 BINUTILS_TAR=binutils-$(BINUTILS_VER).tar.xz
 BINUTILS_URL=ftp://ftp.gnu.org/gnu/binutils/$(BINUTILS_TAR)
 
