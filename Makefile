@@ -20,7 +20,7 @@ MPC_VER=1.1.0
 MPC_TAR=mpc-$(MPC_VER).tar.gz
 MPC_URL=http://ftp.gnu.org/gnu/mpc/$(MPC_TAR)
 
-ISL_VER=0.21
+ISL_VER=0.22
 ISL_TAR=isl-$(ISL_VER).tar.xz
 ISL_URL=http://isl.gforge.inria.fr/$(ISL_TAR)
 
