@@ -149,9 +149,16 @@ gcc1: src/gcc-$(GCC_VER) binutils gmp mpfr mpc isl cloog
 newlib: src/newlib-$(NEWLIB_VER)
 	mkdir -p build/newlib
 	cd build/newlib; \
-	$(BASEDIR)/$</configure --target=$(TARGET) --prefix=$(PREFIX) --enable-interwork --enable-multilib --disable-libssp --disable-nls --disable-decimal-float --enable-newlib-io-c99-formats --enable-newlib-io-long-long --disable-newlib-supplied-syscalls --enable-newlib-reent-small --disable-newlib-atexit-dynamic-alloc --disable-newlib-fvwrite-in-streamio --disable-newlib-fseek-optimization --disable-newlib-wide-orient --disable-newlib-unbuf-stream-opt --enable-newlib-global-atexit --enable-newlib-nano-formatted-io --enable-lite-exit --enable-newlib-nano-malloc --disable-newlib-fvwrite-in-streamio; \
+	$(BASEDIR)/$</configure --target=$(TARGET) --prefix=$(PREFIX) --enable-interwork --enable-multilib --disable-libssp --disable-nls --enable-newlib-io-c99-formats --enable-newlib-io-long-long --disable-newlib-supplied-syscalls --disable-newlib-atexit-dynamic-alloc --enable-newlib-register-fini --enable-newlib-retargetable-locking; \
 	$(MAKE) $(MAKEOPTS); \
 	$(MAKE) install
+
+#newlib: src/newlib-$(NEWLIB_VER)
+#	mkdir -p build/newlib_nano
+#	cd build/newlib_nano; \
+#	$(BASEDIR)/$</configure --target=$(TARGET) --prefix=$(PREFIX) --enable-interwork --enable-multilib --disable-libssp --disable-nls --disable-decimal-float --enable-newlib-io-c99-formats --enable-newlib-reent-small --disable-newlib-atexit-dynamic-alloc --disable-newlib-fvwrite-in-streamio --disable-newlib-fseek-optimization --disable-newlib-wide-orient --disable-newlib-unbuf-stream-opt --enable-newlib-global-atexit --enable-newlib-nano-formatted-io --enable-lite-exit --enable-newlib-nano-malloc; \
+#	$(MAKE) $(MAKEOPTS); \
+#	$(MAKE) install
 
 gcc: gcc1 newlib
 	cd build/gcc; \
@@ -164,8 +171,8 @@ gdb: src/gdb-$(GDB_VER)
 	$(BASEDIR)/$</configure --target=$(TARGET) --prefix=$(PREFIX) --enable-interwork --enable-multilib --disable-libssp --disable-nls --with-system-readline --enable-sim-arm --enable-sim-stdio --with-guile=no; \
 	$(MAKE) $(MAKEOPTS); \
 	$(MAKE) install; \
-	strip $(PREFIX)/bin/arm-none-eabi-gdb; \
-	strip $(PREFIX)/bin/arm-none-eabi-run
+	strip $(PREFIX)/bin/$(TARGET)-gdb; \
+	strip $(PREFIX)/bin/$(TARGET)-run
 
 clean:
 	rm -rf build $(PREFIX)
