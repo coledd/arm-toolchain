@@ -4,7 +4,7 @@ PREFIX=$(BASEDIR)/$(TARGET)
 MAKEOPTS="-j16"
 PATH:=$(PREFIX)/bin:$(PATH)
 
-BINUTILS_VER=2.33.1
+BINUTILS_VER=2.34
 BINUTILS_TAR=binutils-$(BINUTILS_VER).tar.xz
 BINUTILS_URL=ftp://ftp.gnu.org/gnu/binutils/$(BINUTILS_TAR)
 
@@ -36,7 +36,7 @@ GDB_VER=8.3.1
 GDB_TAR=gdb-$(GDB_VER).tar.xz
 GDB_URL=ftp://ftp.gnu.org/gnu/gdb/$(GDB_TAR)
 
-NEWLIB_VER=3.2.0
+NEWLIB_VER=3.3.0
 NEWLIB_TAR=newlib-$(NEWLIB_VER).tar.gz
 NEWLIB_URL=ftp://sourceware.org/pub/newlib/$(NEWLIB_TAR)
 
