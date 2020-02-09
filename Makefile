@@ -32,7 +32,7 @@ GCC_VER=9.2.0
 GCC_TAR=gcc-$(GCC_VER).tar.xz
 GCC_URL=ftp://ftp.gnu.org/gnu/gcc/gcc-$(GCC_VER)/$(GCC_TAR)
 
-GDB_VER=8.3.1
+GDB_VER=9.1
 GDB_TAR=gdb-$(GDB_VER).tar.xz
 GDB_URL=ftp://ftp.gnu.org/gnu/gdb/$(GDB_TAR)
 
