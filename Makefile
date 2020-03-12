@@ -28,7 +28,7 @@ CLOOG_VER=0.18.4
 CLOOG_TAR=cloog-$(CLOOG_VER).tar.gz
 CLOOG_URL=http://www.bastoul.net/cloog/pages/download/$(CLOOG_TAR)
 
-GCC_VER=9.2.0
+GCC_VER=9.3.0
 GCC_TAR=gcc-$(GCC_VER).tar.xz
 GCC_URL=ftp://ftp.gnu.org/gnu/gcc/gcc-$(GCC_VER)/$(GCC_TAR)
 
@@ -176,7 +176,7 @@ gdb: src/gdb-$(GDB_VER)
 
 clean:
 	rm -rf build $(PREFIX)
-	cd src ; rm -rf `ls -1 | grep -v 'gz\|bz2\|xz\|Makefile' | xargs`
+	cd src ; rm -rf `ls -1 | grep -v 'gz\|bz2\|xz\|Makefile\|patch' | xargs`
 
 distclean: clean
 	rm -rf src
