@@ -4,7 +4,7 @@ PREFIX=$(BASEDIR)/$(TARGET)
 MAKEOPTS="-j16"
 PATH:=$(PREFIX)/bin:$(PATH)
 
-BINUTILS_VER=2.34
+BINUTILS_VER=2.35
 BINUTILS_TAR=binutils-$(BINUTILS_VER).tar.xz
 BINUTILS_URL=ftp://ftp.gnu.org/gnu/binutils/$(BINUTILS_TAR)
 
@@ -12,7 +12,7 @@ GMP_VER=6.2.0
 GMP_TAR=gmp-$(GMP_VER).tar.xz
 GMP_URL=ftp://ftp.gnu.org/gnu/gmp/$(GMP_TAR)
 
-MPFR_VER=4.0.2
+MPFR_VER=4.1.0
 MPFR_TAR=mpfr-$(MPFR_VER).tar.xz
 MPFR_URL=ftp://ftp.gnu.org/gnu/mpfr/$(MPFR_TAR)
 
@@ -28,11 +28,11 @@ CLOOG_VER=0.18.4
 CLOOG_TAR=cloog-$(CLOOG_VER).tar.gz
 CLOOG_URL=http://www.bastoul.net/cloog/pages/download/$(CLOOG_TAR)
 
-GCC_VER=10.1.0
+GCC_VER=10.2.0
 GCC_TAR=gcc-$(GCC_VER).tar.xz
 GCC_URL=ftp://ftp.gnu.org/gnu/gcc/gcc-$(GCC_VER)/$(GCC_TAR)
 
-GDB_VER=9.1
+GDB_VER=9.2
 GDB_TAR=gdb-$(GDB_VER).tar.xz
 GDB_URL=ftp://ftp.gnu.org/gnu/gdb/$(GDB_TAR)
 
