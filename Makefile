@@ -4,7 +4,7 @@ PREFIX=$(BASEDIR)/$(TARGET)
 MAKEOPTS="-j16"
 PATH:=$(PREFIX)/bin:$(PATH)
 
-BINUTILS_VER=2.35
+BINUTILS_VER=2.35.1
 BINUTILS_TAR=binutils-$(BINUTILS_VER).tar.xz
 BINUTILS_URL=ftp://ftp.gnu.org/gnu/binutils/$(BINUTILS_TAR)
 
@@ -16,7 +16,7 @@ MPFR_VER=4.1.0
 MPFR_TAR=mpfr-$(MPFR_VER).tar.xz
 MPFR_URL=ftp://ftp.gnu.org/gnu/mpfr/$(MPFR_TAR)
 
-MPC_VER=1.1.0
+MPC_VER=1.2.0
 MPC_TAR=mpc-$(MPC_VER).tar.gz
 MPC_URL=http://ftp.gnu.org/gnu/mpc/$(MPC_TAR)
 
