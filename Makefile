@@ -16,7 +16,7 @@ MPFR_VER=4.1.0
 MPFR_TAR=mpfr-$(MPFR_VER).tar.xz
 MPFR_URL=ftp://ftp.gnu.org/gnu/mpfr/$(MPFR_TAR)
 
-MPC_VER=1.2.0
+MPC_VER=1.2.1
 MPC_TAR=mpc-$(MPC_VER).tar.gz
 MPC_URL=http://ftp.gnu.org/gnu/mpc/$(MPC_TAR)
 
@@ -32,7 +32,7 @@ GCC_VER=10.2.0
 GCC_TAR=gcc-$(GCC_VER).tar.xz
 GCC_URL=ftp://ftp.gnu.org/gnu/gcc/gcc-$(GCC_VER)/$(GCC_TAR)
 
-GDB_VER=9.2
+GDB_VER=10.1
 GDB_TAR=gdb-$(GDB_VER).tar.xz
 GDB_URL=ftp://ftp.gnu.org/gnu/gdb/$(GDB_TAR)
 
