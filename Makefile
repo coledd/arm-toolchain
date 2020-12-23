@@ -8,7 +8,7 @@ BINUTILS_VER=2.35.1
 BINUTILS_TAR=binutils-$(BINUTILS_VER).tar.xz
 BINUTILS_URL=ftp://ftp.gnu.org/gnu/binutils/$(BINUTILS_TAR)
 
-GMP_VER=6.2.0
+GMP_VER=6.2.1
 GMP_TAR=gmp-$(GMP_VER).tar.xz
 GMP_URL=ftp://ftp.gnu.org/gnu/gmp/$(GMP_TAR)
 
@@ -20,7 +20,7 @@ MPC_VER=1.2.1
 MPC_TAR=mpc-$(MPC_VER).tar.gz
 MPC_URL=http://ftp.gnu.org/gnu/mpc/$(MPC_TAR)
 
-ISL_VER=0.22.1
+ISL_VER=0.23
 ISL_TAR=isl-$(ISL_VER).tar.xz
 ISL_URL=http://isl.gforge.inria.fr/$(ISL_TAR)
 
@@ -36,7 +36,7 @@ GDB_VER=10.1
 GDB_TAR=gdb-$(GDB_VER).tar.xz
 GDB_URL=ftp://ftp.gnu.org/gnu/gdb/$(GDB_TAR)
 
-NEWLIB_VER=3.3.0
+NEWLIB_VER=4.1.0
 NEWLIB_TAR=newlib-$(NEWLIB_VER).tar.gz
 NEWLIB_URL=ftp://sourceware.org/pub/newlib/$(NEWLIB_TAR)
 
