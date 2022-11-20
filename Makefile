@@ -4,7 +4,7 @@ PREFIX=$(BASEDIR)/$(TARGET)
 MAKEOPTS="-j16"
 PATH:=$(PREFIX)/bin:$(PATH)
 
-BINUTILS_VER=2.37
+BINUTILS_VER=2.39
 BINUTILS_TAR=binutils-$(BINUTILS_VER).tar.xz
 BINUTILS_URL=https://ftp.gnu.org/gnu/binutils/$(BINUTILS_TAR)
 
@@ -12,7 +12,7 @@ GMP_VER=6.2.1
 GMP_TAR=gmp-$(GMP_VER).tar.xz
 GMP_URL=https://ftp.gnu.org/gnu/gmp/$(GMP_TAR)
 
-MPFR_VER=4.1.0
+MPFR_VER=4.1.1
 MPFR_TAR=mpfr-$(MPFR_VER).tar.xz
 MPFR_URL=https://ftp.gnu.org/gnu/mpfr/$(MPFR_TAR)
 
@@ -20,23 +20,23 @@ MPC_VER=1.2.1
 MPC_TAR=mpc-$(MPC_VER).tar.gz
 MPC_URL=https://ftp.gnu.org/gnu/mpc/$(MPC_TAR)
 
-ISL_VER=0.24
+ISL_VER=0.25
 ISL_TAR=isl-$(ISL_VER).tar.xz
-ISL_URL=http://isl.gforge.inria.fr/$(ISL_TAR)
+ISL_URL=https://libisl.sourceforge.io/$(ISL_TAR)
 
 CLOOG_VER=0.18.4
 CLOOG_TAR=cloog-$(CLOOG_VER).tar.gz
 CLOOG_URL=http://www.bastoul.net/cloog/pages/download/$(CLOOG_TAR)
 
-GCC_VER=11.2.0
+GCC_VER=12.2.0
 GCC_TAR=gcc-$(GCC_VER).tar.xz
 GCC_URL=https://ftp.gnu.org/gnu/gcc/gcc-$(GCC_VER)/$(GCC_TAR)
 
-GDB_VER=11.1
+GDB_VER=12.1
 GDB_TAR=gdb-$(GDB_VER).tar.xz
 GDB_URL=https://ftp.gnu.org/gnu/gdb/$(GDB_TAR)
 
-NEWLIB_VER=4.1.0
+NEWLIB_VER=4.2.0.20211231
 NEWLIB_TAR=newlib-$(NEWLIB_VER).tar.gz
 NEWLIB_URL=https://sourceware.org/pub/newlib/$(NEWLIB_TAR)
 
