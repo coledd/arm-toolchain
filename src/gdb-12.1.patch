@@ -1,0 +1,12 @@
+diff -urN a/gdb/completer.c b/gdb/completer.c
+--- a/gdb/completer.c	2022-05-01 14:46:31.000000000 -0400
++++ b/gdb/completer.c	2022-11-28 14:00:08.566150332 -0500
+@@ -2011,7 +2011,7 @@
+       rl_basic_quote_characters = NULL;
+     }
+ 
+-  return rl_completer_word_break_characters;
++  return (char *)rl_completer_word_break_characters;
+ }
+ 
+ char *

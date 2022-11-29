@@ -92,6 +92,7 @@ src/gcc-$(GCC_VER): src/$(GCC_TAR)
 
 src/gdb-$(GDB_VER): src/$(GDB_TAR)
 	tar -C src -xf $<
+	cd src/gdb-$(GDB_VER); patch -p1 < ../gdb-$(GDB_VER).patch
 
 src/newlib-$(NEWLIB_VER): src/$(NEWLIB_TAR)
 	tar -C src -xf $<
