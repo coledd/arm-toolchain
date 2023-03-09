@@ -12,7 +12,8 @@ GMP_VER=6.2.1
 GMP_TAR=gmp-$(GMP_VER).tar.xz
 GMP_URL=https://ftp.gnu.org/gnu/gmp/$(GMP_TAR)
 
-MPFR_VER=4.2.0
+#MPFR_VER=4.2.0
+MPFR_VER=4.1.1
 MPFR_TAR=mpfr-$(MPFR_VER).tar.xz
 MPFR_URL=https://ftp.gnu.org/gnu/mpfr/$(MPFR_TAR)
 
@@ -92,11 +93,10 @@ src/gcc-$(GCC_VER): src/$(GCC_TAR)
 
 src/gdb-$(GDB_VER): src/$(GDB_TAR)
 	tar -C src -xf $<
-#	cd src/gdb-$(GDB_VER); patch -p1 < ../gdb-$(GDB_VER).patch
 
 src/newlib-$(NEWLIB_VER): src/$(NEWLIB_TAR)
 	tar -C src -xf $<
-	cd src/$(NEWLIB_TAR); patch -p1 < ../gdb-$(NEWLIB_VER).patch
+	cd src/newlib-$(NEWLIB_VER); patch -p1 < ../newlib-$(NEWLIB_VER).patch
 
 binutils: src/binutils-$(BINUTILS_VER)
 	mkdir -p build/binutils; \
