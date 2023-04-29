@@ -29,7 +29,7 @@ CLOOG_VER=0.18.4
 CLOOG_TAR=cloog-$(CLOOG_VER).tar.gz
 CLOOG_URL=http://www.bastoul.net/cloog/pages/download/$(CLOOG_TAR)
 
-GCC_VER=12.2.0
+GCC_VER=13.1.0
 GCC_TAR=gcc-$(GCC_VER).tar.xz
 GCC_URL=https://ftp.gnu.org/gnu/gcc/gcc-$(GCC_VER)/$(GCC_TAR)
 
@@ -104,7 +104,7 @@ binutils: src/binutils-$(BINUTILS_VER)
 	$(BASEDIR)/$</configure --target=$(TARGET) --prefix=$(PREFIX) --enable-interwork --enable-multilib --disable-nls --disable-libssp --disable-shared --disable-gdb; \
 	$(MAKE) $(MAKEOPTS); \
 	mkdir -p $(PREFIX); \
-	$(MAKE) install
+	$(MAKE) install-strip
 
 gmp: src/gmp-$(GMP_VER)
 	mkdir -p build/gmp; \
@@ -152,7 +152,7 @@ newlib: src/newlib-$(NEWLIB_VER)
 	mkdir -p build/newlib; \
 	cd build/newlib; \
 	$(BASEDIR)/$</configure --target=$(TARGET) --prefix=$(PREFIX) --enable-interwork --enable-multilib --disable-libssp --disable-nls --enable-newlib-io-c99-formats --enable-newlib-io-long-long --disable-newlib-supplied-syscalls --disable-newlib-atexit-dynamic-alloc --enable-newlib-register-fini --enable-newlib-retargetable-locking; \
-	$(MAKE) -j1; \
+	$(MAKE) -$(MAKEOPTS); \
 	$(MAKE) install
 
 #newlib: src/newlib-$(NEWLIB_VER)
@@ -172,9 +172,7 @@ gdb: src/gdb-$(GDB_VER)
 	cd build/gdb; \
 	$(BASEDIR)/$</configure --target=$(TARGET) --prefix=$(PREFIX) --enable-interwork --enable-multilib --disable-libssp --disable-nls --with-system-readline --enable-sim-arm --enable-sim-stdio --with-guile=no; \
 	$(MAKE) $(MAKEOPTS); \
-	$(MAKE) install; \
-	strip $(PREFIX)/bin/$(TARGET)-gdb; \
-	strip $(PREFIX)/bin/$(TARGET)-run
+	$(MAKE) install-strip;
 
 clean:
 	rm -rf build $(PREFIX); \
